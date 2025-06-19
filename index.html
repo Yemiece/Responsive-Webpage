@@ -86,7 +86,27 @@
         <p>Culture and Heritage</p>
       </div>
     </div>
-  </section>
+  </section> <!-- Newsletter Section -->
+<section class="px-6 py-12 bg-white">
+  <!-- <h2 class="text-3xl font-bold text-center mb-6">📝 Class Assignment 📝</h2> -->
+  <h1 class="text-center mb-6 text-gray-700"><b>Subscribe to our Newsletter</b></h1>
+  <p>Stay updated with our latest news and offers</p><br>
+  <div class="max-w-xl mx-auto flex flex-col sm:flex-row items-center gap-4">
+    <input
+      id="emailInput"
+      type="email"
+      placeholder="Enter your email"
+      class="w-full px-4 py-2 border rounded shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      required
+    /><br>
+    <button
+      onclick="subscribeNewsletter('successful!')"
+      class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-centre sm:w-auto"
+    >
+      Subscribe
+    </button>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="grid grid-cols-1 sm:grid-cols-3 gap-8 px-6 py-8 bg-blue-800 text-white">
@@ -111,6 +131,19 @@ E</p>
         <a href="https://www.instagram.com/yemiece?igsh=MXR5bmR4aHE2ZHZxcA%3D%3D&utm_source=qr" target="_blank"><img src="images/instagram logo.jpg" alt="Instagram" class="h-12 w-12"/></a>
       </div>
     </div>
+   
+<script>
+  function subscribeNewsletter() {
+    const email = document.getElementById('emailInput').value;
+    if (email.trim() === '') {
+      alert("Please enter a valid email address.");
+    } else {
+      alert(`Thank you for subscribing with ${email}!`);
+      document.getElementById('emailInput').value = '';
+    }
+  }
+</script>
+
   </footer>
 </body>
 </html>
